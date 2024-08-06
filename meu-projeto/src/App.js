@@ -1,10 +1,31 @@
+import {BrowserRouter as Router,Routes,Route, Link} from 'react-router-dom'
+ import Home from './components/pages/Home'
+ import Contact from './components/pages/Contact'
+ import NewProject from './components/pages/NewProject'
 
+
+import Container from './components/layout/Container'
 
 function App() {
   return (
-    <div className="App">
-      <p>Costs</p>
-    </div>
+ <Router>
+ <div>
+  <Link to="/">Home</Link>
+  <Link to="/contact">Contato</Link>
+
+  <Link to="/newproject">Novo Projeto</Link>
+ </div>
+ <Container customClass="minHeight"> 
+             <Routes>
+            <Route path='/' exact='true' element={<Home/>}></Route>
+            <Route path='/contact' element={<Contact/>}></Route>
+
+            <Route path='/newproject' element={<NewProject/>}></Route>
+          </Routes>
+          </Container>
+     <p>Footer</p>
+ </Router>
+
   );
 }
 
