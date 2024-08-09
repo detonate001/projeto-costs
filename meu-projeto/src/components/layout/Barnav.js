@@ -3,7 +3,7 @@
 import { Link } from 'react-router-dom'
 import Container from './Container'
 import styles from './Barnav.module.css'
-import logo from '.././img/logo.png.png'
+import logo from '../layout/img/logo.png.png'
 
 
 function Barnav () {
@@ -15,8 +15,8 @@ function Barnav () {
             </Link>
             <ul className={styles.list}>
                 <li className={styles.item}><Link to="/">Home</Link></li>
-                <li className={styles.item}><Link to="/projects">Projetos</Link></li>
-                <li className={styles.item}><Link to="/newproject">Novo Projeto</Link></li>
+                <li className={styles.item}><Link to="/projects">Empresa</Link></li>
+                <li className={styles.item}><Link to="/newproject">Projetos</Link></li>
                 <li className={styles.item}><Link to="/contact">Contato</Link></li>
             </ul>
 
